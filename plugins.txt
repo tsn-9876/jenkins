@@ -39,7 +39,7 @@ jsch
 junit
 ldap
 lockable-resources
-mailer
+#mailer
 mapdb-api
 matrix-auth
 matrix-project
