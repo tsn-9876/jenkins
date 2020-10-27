@@ -3,6 +3,9 @@ ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
 USER root
+COPY /opt/java/*.tar* /opt/java
+RUN tar -xvzf /opt/java/*.tar.gz
+RUN tar -xvf /opt/java/*.tar
 RUN apt-get update
 RUN apt-get install -y xvfb
 RUN apt-get install -y vim
