@@ -6,6 +6,7 @@ USER root
 COPY jdk-7u80-linux-x64.tar.gz /opt/java
 COPY jdk-8u181-linux-x64.tar /opt/java
 COPY OpenJDK11U-jdk_x64_linux_hotspot_11.0.9_11.tar.gz /opt/java
+RUN ls /opt/java
 RUN tar -xvzf /opt/java/jdk-7u80-linux-x64.tar.gz
 RUN tar -xvzf /opt/java/OpenJDK11U-jdk_x64_linux_hotspot_11.0.9_11.tar.gz
 RUN tar -xvf /opt/java/jdk-8u181-linux-x64.tar
